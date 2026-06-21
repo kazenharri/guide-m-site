@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>再次留意 · bet365</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #fafaf9;
+      color: #1e2a36;
+      line-height: 1.7;
+    }
+
+    .hero {
+      background: #0c121a;
+      background-image: radial-gradient(circle at 20% 30%, #1f2c3a 0%, #0a0f15 100%);
+      color: #e1e9f0;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, #fafaf9);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .intro-line {
+      font-size: 1.1rem;
+      color: #b0c4d9;
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -1rem auto 0;
+      padding: 0 2rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2rem;
+    }
+
+    .card h2 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: #0f1b27;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #2d7b9c;
+      padding-left: 1rem;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      color: #273b4a;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1.8rem 0 1rem;
+      list-style: none;
+    }
+
+    .feature-list li {
+      background: #f4f7fa;
+      border-radius: 18px;
+      padding: 1.2rem 1.5rem;
+      font-weight: 450;
+      color: #1b2c3d;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      transition: background 0.2s;
+    }
+
+    .feature-list li::before {
+      content: '·';
+      font-weight: 700;
+      color: #2d7b9c;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .feature-list li:hover {
+      background: #e9eef5;
+    }
+
+    .story-signature {
+      font-size: 1rem;
+      background: #f0f3f7;
+      border-radius: 24px;
+      padding: 1.8rem 2.2rem;
+      margin-top: 1.5rem;
+      color: #1f3446;
+    }
+
+    .story-signature p {
+      margin-bottom: 0.6rem;
+    }
+
+    .story-signature p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-mini {
+      margin-top: 2rem;
+    }
+
+    .faq-mini details {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #dce4eb;
+    }
+
+    .faq-mini details:first-of-type {
+      border-top: 1px solid #dce4eb;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #0f1b27;
+      padding: 0.4rem 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-mini summary::before {
+      content: '▸';
+      color: #2d7b9c;
+      margin-right: 0.8rem;
+      transition: transform 0.2s;
+    }
+
+    .faq-mini details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .faq-mini details p {
+      margin: 0.5rem 0 0.2rem 1.8rem;
+      color: #37586e;
+    }
+
+    a {
+      color: #1f6d91;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #0b4b6b;
+      border-bottom-color: #0b4b6b;
+    }
+
+    .btn-soft {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #3c6f8b;
+      color: #1e4f6b;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-soft:hover {
+      background: #1e4f6b;
+      color: #f0f5fa;
+      border-color: #1e4f6b;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7b8f9f;
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dee6ed;
+    }
+
+    @media (max-width: 680px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .card {
+        padding: 1.8rem 1.5rem;
+        border-radius: 20px;
+      }
+
+      .feature-list {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+
+      .container {
+        padding: 0 1.2rem 3rem;
+      }
+
+      .hero {
+        padding: 3rem 1.2rem 2.5rem;
+      }
+
+      .card h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>又回到这里</h1>
+    <p class="intro-line">有时候，一个网址就像书签一样——不一定每天打开，但知道它在那里。</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>一次收藏，一个习惯</h2>
+      <p>大约是在去年秋天，我第一次把 <a href="https://m-site-bet365.com">bet365</a> 加到了书签栏。不是因为什么特别的契机，只是觉得界面干净，信息层级清楚。后来每次想看赛事动态、或者只是随意浏览一下，都会点开这个标签页。它渐渐变成了一种熟悉的锚点——不需要刻意想起，但手指会自动输入那串字母。</p>
+      <p>我猜很多人也是这样。书签里躺着不少网站，真正反复回去的并不多。但总有几个，你会下意识地保留，甚至换设备时也会重新收藏。<strong>bet365</strong> 就是其中之一，至少对我来说。</p>
+    </div>
+
+    <div class="card">
+      <h2>几个我喜欢的细节</h2>
+      <ul class="feature-list">
+        <li>页面加载利落，几乎没有冗余动画</li>
+        <li>导航层次分明，不让人迷失</li>
+        <li>赛事信息更新很及时，节奏舒服</li>
+        <li>移动端适配自然，没有缩放变形</li>
+        <li>色彩沉稳，阅读时眼睛不累</li>
+        <li>登录流程克制，不反复弹窗</li>
+      </ul>
+      <div class="story-signature">
+        <p>这些细节谈不上惊艳，但组合在一起就让人愿意留下来。就像一家常去的书店，你知道每类书大概在哪个架子，店员不会过分热情，但你需要时总能找到。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>持续关注，而不是频繁打扰</h2>
+      <p>好的网站不会一直推着你做什么。它只是安静地更新、保持可用，等你需要的时候自然就会回来。<a href="https://m-site-bet365.com">bet365</a> 在这方面做得很克制——你可以几个月不登录，回来时界面依然熟悉，设置没有乱改，数据也都还在。这种稳定感，反而让人更愿意持续关注下去。</p>
+      <p>我有时候会想，一个网站能做到让人愿意“收藏并再次访问”，其实比追求短期点击更难。因为这需要长期的信任积累，而不是一时的花哨。</p>
+
+      <div class="faq-mini">
+        <details>
+          <summary>书签太多，为什么还留着这个？</summary>
+          <p>因为界面干净，没有多余的信息噪音。而且每次更新日志都简洁明了，不搞突然的改版。熟悉感本身也是一种价值。</p>
+        </details>
+        <details>
+          <summary>移动端和电脑端体验一致吗？</summary>
+          <p>基本一致。移动端做了合理精简，但核心功能都在。尤其是横屏模式下的布局，看得出是认真调整过的。</p>
+        </details>
+        <details>
+          <summary>需要注册才能浏览主要内容吗？</summary>
+          <p>大部分信息无需登录即可查看。注册是可选步骤，而且流程很短，没有强制填写过多资料。</p>
+        </details>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin: 1.5rem 0;">
+      <a href="https://m-site-bet365.com" class="btn-soft">bet365</a>
+      <span style="display: block; font-size: 0.85rem; color: #56768b; margin-top: 0.6rem;">（书签栏里最安静的那个标签页）</span>
+    </div>
+
+    <div class="footer-note">
+      <p>不过是另一个收藏夹里的站点 —— 平凡但可靠。</p>
+    </div>
+  </div>
+</body>
+</html>
